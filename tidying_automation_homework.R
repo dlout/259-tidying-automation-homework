@@ -13,7 +13,6 @@ paths <- c("https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_
            "https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_Two_Towers.csv",
            "https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_Return_Of_The_King.csv")
 
-#test
 
 #Read data
 #Each dataset has the words spoken by male/female characters in the LOTR triology by race (elf, hobbit, or human)
@@ -27,10 +26,10 @@ ds_combined <- bind_rows(ds1, ds2, ds3)
 
 #For this assignment, you created a fork from the Github repo and cloned your own copy
 #As you work on the assignment, make commits and push the changes to your own repository.
-#Make your repository public and paste the link here:
+#Make your repository public and paste the link here: https://github.com/dlout/259-tidying-automation-homework
 
 #ANSWER
-#YOUR GITHUB LINK: 
+#YOUR GITHUB LINK: https://github.com/dlout/259-tidying-automation-homework
 
 ### Question 2 ---------- 
 
