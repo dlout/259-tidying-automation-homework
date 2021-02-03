@@ -13,6 +13,8 @@ paths <- c("https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_
            "https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_Two_Towers.csv",
            "https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_Return_Of_The_King.csv")
 
+#test
+
 #Read data
 #Each dataset has the words spoken by male/female characters in the LOTR triology by race (elf, hobbit, or human)
 
