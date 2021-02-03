@@ -60,7 +60,8 @@ ds_map <- map_dfr(paths, ~ read_csv(.x))
 #Use ds_combined or one of the ones you created in Question 2 or 3, and save the output to ds_longer
 
 #ANSWER
-
+ds_longer <- pivot_longer(ds_loop, cols = -(Film:Race), names_to = "Sex", values_to = "Words")
+# I'm a little confused on why this works... but at least it does work
 
 ### Question 5 ----------
 
@@ -69,6 +70,9 @@ ds_map <- map_dfr(paths, ~ read_csv(.x))
 #Merge it into ds_longer and then create a new column that expresses the words spoken as a percentage of the total
 total_words <- tibble(Film =  c("The Fellowship Of The Ring", "The Two Towers","The Return Of The King"),
                       Total = c(177277, 143436, 134462))
+
+#ANSWER
+
 
 ### Question 6 ----------
 #The function below creates a graph to compare the words spoken by race/sex for a single film
