@@ -94,6 +94,12 @@ words_graph <- function(df) {
 }
 
 #ANSWER
+words_graph(ds_longer)
+testing <- for i in ds_longer$Film {
+  ds_longer[[i]] <- words_graph(ds_longer[[i]])
+}
+# I'm not sure what's up here.. a bit too tired to keep at it for now.
+
 
 
 ### Question 7 ----------
