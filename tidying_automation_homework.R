@@ -49,11 +49,17 @@ for (path in paths) {
 #Use map with paths to read in the data to a single tibble called ds_map
 #If you did this correctly, it should look the same as ds_combined created above
 
+#ANSWER
+ds_map <- map_dfr(paths, ~ read_csv(.x))
+
 ### Question 4 ----------
 
 #The data are in a wider-than-ideal format. 
 #Use pivot_longer to reshape the data so that sex is a column with values male/female and words is a column
 #Use ds_combined or one of the ones you created in Question 2 or 3, and save the output to ds_longer
+
+#ANSWER
+
 
 ### Question 5 ----------
 
