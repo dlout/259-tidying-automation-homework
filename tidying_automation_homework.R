@@ -42,7 +42,6 @@ ds_loop <- NULL
 
 for (path in paths) {
   temp_ds_loop <- read_csv(path)
-  temp_ds_loop$path <- path
   ds_loop <- bind_rows(ds_loop, temp_ds_loop)
 }
 
