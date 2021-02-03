@@ -71,8 +71,11 @@ ds_longer <- pivot_longer(ds_loop, cols = -(Film:Race), names_to = "Sex", values
 total_words <- tibble(Film =  c("The Fellowship Of The Ring", "The Two Towers","The Return Of The King"),
                       Total = c(177277, 143436, 134462))
 
-#ANSWER
 
+#ANSWER
+install.packages("scales")
+percentage_spoken <- ds_longer$Words / total_words$Total
+ds_longer <- ds_longer %>% add_column(percentage_spoken)
 
 ### Question 6 ----------
 #The function below creates a graph to compare the words spoken by race/sex for a single film
