@@ -37,6 +37,13 @@ ds_combined <- bind_rows(ds1, ds2, ds3)
 #(Yes, Vroom does this automatically but practice doing it with a loop)
 #If you did this correctly, it should look the same as ds_combined created above
 
+#ANSWER
+for (path in paths) {
+  temp_ds_loop <- read_csv(path)
+  temp_ds_loop$path <- path
+  ds_loop <- bind_rows(ds_loop, temp_ds_loop)
+}
+
 ### Question 3 ----------
 
 #Use map with paths to read in the data to a single tibble called ds_map
