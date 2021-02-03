@@ -74,8 +74,12 @@ total_words <- tibble(Film =  c("The Fellowship Of The Ring", "The Two Towers","
 
 #ANSWER
 install.packages("scales")
+library("scales")
+
 percentage_spoken <- ds_longer$Words / total_words$Total
-ds_longer <- ds_longer %>% add_column(percentage_spoken)
+ds_longer <- ds_longer %>% add_column(scales::percent(percentage_spoken))
+#ds_longer <- ds_longer %>% mutate(scales::percent(percentage_spoken = "Percentage Spoken"))
+# I made it this far, but I can't rename a damn column... shakes fist! I'm tired...
 
 ### Question 6 ----------
 #The function below creates a graph to compare the words spoken by race/sex for a single film
@@ -88,6 +92,9 @@ words_graph <- function(df) {
     ggtitle(df$Film) + theme_minimal()
   print(p)
 }
+
+#ANSWER
+
 
 ### Question 7 ----------
 
