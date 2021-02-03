@@ -38,6 +38,8 @@ ds_combined <- bind_rows(ds1, ds2, ds3)
 #If you did this correctly, it should look the same as ds_combined created above
 
 #ANSWER
+ds_loop <- NULL
+
 for (path in paths) {
   temp_ds_loop <- read_csv(path)
   temp_ds_loop$path <- path
